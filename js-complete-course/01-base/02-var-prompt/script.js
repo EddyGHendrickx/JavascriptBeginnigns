@@ -12,6 +12,6 @@
 (function AlertMe() {
 
    let Name = "Matthijs";
-   alert(`Hello World, my name is $Name`);
+   alert(`Hello World, my name is ${Name}`);
 
 })();
