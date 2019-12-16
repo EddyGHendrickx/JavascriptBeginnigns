@@ -9,8 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+function Yes() {
 
-  // your code here
+alert(`The cake is a lie`)
 
-})();
+};
+
+function No(){
+    alert (`More cake for me then`)
+}
