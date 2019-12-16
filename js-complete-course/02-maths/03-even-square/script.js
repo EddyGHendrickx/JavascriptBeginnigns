@@ -13,8 +13,7 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
-
-    });
-
-})();
+       for(i = 1; i < 21; i++) {
+        alert(Math.sqrt(i));
+       }
+}
