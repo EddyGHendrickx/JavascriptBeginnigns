@@ -9,22 +9,38 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-    // to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("addition").addEventListener("click", function() {
-        // perform an addition
-    });
+function plus() {
+    let Number1 = document.getElementById("op-one").value;
+    let Number2 = document.getElementById("op-two").value;
+    let Optellen = Number(Number1) + Number(Number2);
+    alert (`The addition is ${Optellen}`);
 
-    document.getElementById("substraction").addEventListener("click", function() {
-        // perform an substraction
-    });
+    // or  let Number1 = +document.getElementById("op-one").value;
+    //     let Number2 = +document.getElementById("op-two").value;
+    //     let Optellen = (Number1) + (Number2);
+    //     alert (`The addition is ${Optellen}`);
+}
 
-    document.getElementById("multiplication").addEventListener("click", function() {
-        // perform an multiplication
-    });
+function min() {
+    let Number1 = +document.getElementById("op-one").value;
+    let Number2 = +document.getElementById("op-two").value;
+    let Optellen = (Number1) - (Number2);
+    alert(`The substraction is ${Optellen}`);
+}
 
-    document.getElementById("division").addEventListener("click", function() {
-        // perform an division
-    });
-})();
+function maal() {
+    let Number1 = +document.getElementById("op-one").value;
+    let Number2 = +document.getElementById("op-two").value;
+    let Optellen = (Number1) * (Number2);
+    alert(`The multiplication is ${Optellen}`);
+}
+
+function delen() {
+    let Number1 = +document.getElementById("op-one").value;
+    let Number2 = +document.getElementById("op-two").value;
+    let Optellen = (Number1) / (Number2);
+    alert(`The division is ${Optellen}`);
+}
+
+// Sorry for the Dutch function names. The variable 'Addition' didn't work so I resorted to simpler solutions
