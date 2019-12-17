@@ -15,7 +15,7 @@
 
     document.getElementById("run").addEventListener("click", function () {
 
-        var factor = function (number) {
+        function factorial (number) {
             var result = 1;
 
             for (var i = number; i > 1; i--) {
@@ -26,7 +26,7 @@
 
 
         let myInput = document.getElementById("number").value;
-        alert(factor(myInput));
+        alert(factorial(myInput));
 
     });
 })();

@@ -12,7 +12,7 @@
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
 
-    var performOperation = function(operation) {
+    function calcSwitch(operation) {
         // perform the operation
         var x = Number(document.getElementById("op-one").value);
 
@@ -40,7 +40,7 @@
     };
     (document.querySelectorAll("button")).forEach(function($btn) {
         $btn.addEventListener("click", function() {
-            performOperation($btn.id);
+            calcSwitch($btn.id);
         });
     });
 })();
