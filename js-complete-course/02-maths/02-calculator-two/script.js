@@ -9,17 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
-
     function calcSwitch(operation) {
         // perform the operation
         var x = Number(document.getElementById("op-one").value);
-
         var y = Number(document.getElementById("op-two").value);
-
         var z;
-
         switch (operation) {
             case "addition":
                 z = (x + y);
@@ -37,14 +34,18 @@
                 alert("error");
         }
         alert(z);
-    };
-    (document.querySelectorAll("button")).forEach(function($btn) {
-        $btn.addEventListener("click", function() {
-            calcSwitch($btn.id);
+    }
+    (document.querySelectorAll("button")).forEach(function (btn) {
+        btn.addEventListener("click", function() {
+            console.log(btn);
+            calcSwitch(btn.id);
+
         });
     });
+
 })();
 
 // I copied this from a repository I found, because I didn't find the solution
 // I understand this code until the parameter of the function is used on the switch statement.
-// Not sure what the $btn is but it returns the total button line in HTML. 
+// Not sure what the $btn is but it returns the total button line in HTML.
+// I understand now, thanks Sikko 
