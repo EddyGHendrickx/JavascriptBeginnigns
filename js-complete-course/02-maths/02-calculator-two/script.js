@@ -38,8 +38,7 @@
         }
         alert(z);
     };
-
-    Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
+    (document.querySelectorAll("button")).forEach(function($btn) {
         $btn.addEventListener("click", function() {
             performOperation($btn.id);
         });
@@ -47,3 +46,5 @@
 })();
 
 // I copied this from a repository I found, because I didn't find the solution
+// I understand this code until the parameter of the function is used on the switch statement.
+// Not sure what the $btn is but it returns the total button line in HTML. 
