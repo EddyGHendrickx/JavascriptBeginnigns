@@ -14,7 +14,7 @@
 document.getElementById("run").addEventListener("click", function() {
 
        for(i = 1; i < 21; i++) {
-        alert(Math.sqrt(i));
+        alert(Math.pow(i, 2));
         console.log(i);
        }});
 

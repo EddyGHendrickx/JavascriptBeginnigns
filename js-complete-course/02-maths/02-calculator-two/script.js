@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 
-(function() {
+
     // to get the value of an input: document.getElementById("element-id").value
     function calcSwitch(operation) {
         // perform the operation
@@ -43,9 +43,7 @@
         });
     });
 
-})();
-
 // I copied this from a repository I found, because I didn't find the solution
 // I understand this code until the parameter of the function is used on the switch statement.
 // Not sure what the $btn is but it returns the total button line in HTML.
-// I understand now, thanks Sikko 
+// I understand now, thanks Sikko
