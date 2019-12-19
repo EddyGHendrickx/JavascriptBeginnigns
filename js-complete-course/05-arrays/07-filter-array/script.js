@@ -89,6 +89,17 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        var adultArray = [];
+        people.forEach(function (person) {
+            if (person.age >= 18){
+                adultArray.push(person.firstname);
+                adultArray.push(person.lastname);
+                adultArray.push(person.age);
+            }
 
+        });
+        console.log(adultArray);
+
+    })
 })();
