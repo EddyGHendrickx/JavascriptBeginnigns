@@ -23,7 +23,14 @@
         "raisin",
         "cerise",
     ];
+document.getElementById("run").addEventListener("click", function(){
 
-    // your code here
+    fruits.splice(0, 1);
+    fruits.splice(9, 1);
+    fruits.push("kiwi");
+    fruits.unshift("Banana");
+    console.log(fruits);
+
+})
 
 })();
