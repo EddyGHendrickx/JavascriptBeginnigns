@@ -94,7 +94,7 @@
     ages.push(person.age);
     });
     console.log(ages);
-    var sums = ages.reduce((sum, num) => {
+    var sums = ages.reduce(function(sum, num) {
         return sum + num;
     }, 0);
     console.log(sums);
