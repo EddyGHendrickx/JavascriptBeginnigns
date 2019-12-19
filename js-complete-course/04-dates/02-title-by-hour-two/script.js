@@ -13,14 +13,16 @@
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    var today = new Date().getMinutes();
-    var todayMinutes = new Date().getHours();
-    if (today <= 18) {
-        alert("Hello");
-    } else {
+    var today = new Date().getHours();
+    var todayMinutes = new Date().getMinutes();
+    if (today <= 17 && todayMinutes < 30) {
+        document.getElementById("target").innerHTML = "Good Evening";
         alert("Good Evening");
+    } else {
+        document.getElementById("target").innerHTML = "Hello";
+        alert("Hello");
     }
 
-    console.log(today,"+" todayMinutes)
+
 })();
 
