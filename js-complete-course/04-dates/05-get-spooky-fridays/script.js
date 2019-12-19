@@ -8,15 +8,20 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-document.getElementById("run").addEventListener("click", function whatYearIsIt(thisYear) {
+document.getElementById("run").addEventListener("click", function numberOfFridaythe13thsIn(jahr){
+    var jahr = document.getElementById("year").value;
     var d = new Date();
+    var counter = 0;
     var month;
-    var count = 0;
-    for (var month=0; month<12; month++) {
-        var d = new Date(thisYear,month,13);
-        if(d.getDay() == 5){
-            count++;
+
+    for(month=0;month<12;month++)
+    {
+        d.setFullYear(jahr, month,13);
+        if (d.getDay() == 5)
+        {
+            counter++;
         }
     }
-    return count;
+
+    console.log(numberOfFridaythe13thsIn(jahr));
 });
