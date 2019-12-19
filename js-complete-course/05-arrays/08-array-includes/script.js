@@ -26,6 +26,13 @@
         "cherry",
     ];
 
-    // your code here
-
-})();
+document.getElementById("run").addEventListener("click", function () {
+fruits.forEach(function (element) {
+    if (element == "apple") {
+        console.log("Yes");
+    }
+    else
+    {
+        console.log("No");
+    }
+})})})();
