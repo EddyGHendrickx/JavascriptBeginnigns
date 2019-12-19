@@ -8,9 +8,15 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-
-(function() {
-
-    // your code here
-
-})();
+document.getElementById("run").addEventListener("click", function whatYearIsIt(thisYear) {
+    var d = new Date();
+    var month;
+    var count = 0;
+    for (var month=0; month<12; month++) {
+        var d = new Date(thisYear,month,13);
+        if(d.getDay() == 5){
+            count++;
+        }
+    }
+    return count;
+});
