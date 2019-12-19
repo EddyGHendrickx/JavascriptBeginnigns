@@ -25,15 +25,15 @@
 
         var ageYear = today.getFullYear() - visitorBirthYear;
         if (visitorBirthMonth > (today.getMonth()+1)) {
-            alert(`your age is ${ageYear - 1}`);
-        } else if (visitorBirthMonth == (today.getMonth()+1) && visitorBirthDay >= today.getDay()) {
-            alert(`your age is ${ageYear - 1}`);
-        } else {
             alert(`your age is ${ageYear}`);
+        } else if (visitorBirthMonth == (today.getMonth()+1) && visitorBirthDay >= today.getDate()) {
+            alert(`your age is ${ageYear}`);
+        } else {
+            alert(`your age is ${ageYear - 1}`);
         }
 
         console.log(typeof(visitorBirthMonth));
-        console.log(today.getMonth());
+        console.log(today.getDate());
 
         console.log(birthDay);
         console.log(diffTime);
