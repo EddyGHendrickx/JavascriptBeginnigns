@@ -19,4 +19,5 @@
         alert("Good Evening");
     }
 
+    console.log(today)
 })();
