@@ -8,20 +8,17 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-document.getElementById("run").addEventListener("click", function numberOfFridaythe13thsIn(jahr){
-    var jahr = document.getElementById("year").value;
-    var d = new Date();
-    var counter = 0;
-    var month;
 
-    for(month=0;month<12;month++)
-    {
-        d.setFullYear(jahr, month,13);
-        if (d.getDay() == 5)
-        {
-            counter++;
-        }
-    }
+(function () {
+    document.getElementById("run").addEventListener("click", function(){
+    var month = 0;
+    var weekDay = new Date().getDay();
+    var day = new Date().getDate();
+    var inputYear = +document.getElementById("year").value;
+    var thisTime = new Date();
+    thisTime.setFullYear(inputYear, month, day, weekDay);
+    console.log(thisTime);
+    })
 
-    console.log(numberOfFridaythe13thsIn(jahr));
-});
+})();
+
