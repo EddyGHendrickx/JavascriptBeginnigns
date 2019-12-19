@@ -32,7 +32,7 @@ document.getElementById("run").addEventListener("click", function(){
 
     let unique = [...new Set(fruits)];
     console.log(unique);
-  //Set lets you store unique values, so it does the job for me. 
+  //Set lets you store unique values, so it does the job for me.
 
 });
 })();

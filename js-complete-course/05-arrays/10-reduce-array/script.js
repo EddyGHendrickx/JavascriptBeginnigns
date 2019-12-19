@@ -89,6 +89,7 @@
         },
     ];
     document.getElementById("run").addEventListener("click", function(){
+    //Make a new array with only the ages in them.
     var ages = [];
     people.forEach(function (person) {
     ages.push(person.age);
