@@ -12,5 +12,14 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function(){
 
+        var visitorBirthDay = document.getElementById("dob-day").selectedIndex;
+        var visitorBirthMonth = document.getElementById("dob-month").selectedIndex;
+        var visitorBirthYear = document.getElementById("dob-year").selectedIndex;
+
+    console.log(visitorBirthday);
+
+
+    });
 })();

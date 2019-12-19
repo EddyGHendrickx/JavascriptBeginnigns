@@ -15,7 +15,7 @@
 
     var today = new Date().getHours();
     var todayMinutes = new Date().getMinutes();
-    if (today <= 17 && todayMinutes < 30) {
+    if (today <= 17  && todayMinutes < 30) {
         document.getElementById("target").innerHTML = "Good Evening";
         alert("Good Evening");
     } else {
