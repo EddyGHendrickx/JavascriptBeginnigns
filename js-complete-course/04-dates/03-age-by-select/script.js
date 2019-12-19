@@ -19,10 +19,18 @@
         var visitorBirthYear = document.getElementById("dob-year").value;
         var birthDay = (`${visitorBirthMonth}/${visitorBirthDay}/${visitorBirthYear}`);
         const visitorBirthDate = new Date(`'${visitorBirthMonth}/${visitorBirthDay}/${visitorBirthYear}'`);
-        let today = new Date().toLocaleDateString();
-        const diffTime = Math.abs(today - visitorBirthDate);
+        var today = new Date();
+        var date = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
+        const diffTime = date - visitorBirthDate;
 
-        console.log(today);
+        var ageYear = today.getFullYear() - visitorBirthYear;
+        if (visitorBirthMonth >= today.getMonth() && visitorBirthDay > today.getDay()) {
+            alert(`your age is ${ageYear - 1}`);
+        } else {
+            alert(`your age is ${ageYear}`)
+        }
+
+        console.log(ageYear);
         console.log(birthDay);
         console.log(diffTime);
     });
