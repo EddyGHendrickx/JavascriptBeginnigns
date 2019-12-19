@@ -24,10 +24,12 @@
         const diffTime = date - visitorBirthDate;
 
         var ageYear = today.getFullYear() - visitorBirthYear;
-        if (visitorBirthMonth >= today.getMonth() && visitorBirthDay > today.getDay()) {
-            alert(`your age is ${ageYear - 1}`);
+        if (visitorBirthMonth > today.getMonth()) {
+            alert(`your age is ${ageYear}`);
+        } else if (visitorBirthMonth = today.getMonth() && visitorBirthDay >= today.getDay()) {
+            alert(`your age is ${ageYear}`);
         } else {
-            alert(`your age is ${ageYear}`)
+            alert(`your age is ${ageYear - 1}`);
         }
 
         console.log(ageYear);
