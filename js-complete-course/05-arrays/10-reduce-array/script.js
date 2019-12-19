@@ -88,15 +88,16 @@
             age: 81,
         },
     ];
-    function sumofArray(sum, num) {
+    document.getElementById("run").addEventListener("click", function(){
+    var ages = [];
+    people.forEach(function (person) {
+    ages.push(person.age);
+    });
+    console.log(ages);
+    var sums = ages.reduce((sum, num) => {
         return sum + num;
-    }
-    document.getElementById("run").addEventListener("click", function () {
-        function sumofArray(sum, num) {
-            return sum + num;
-        }
-        function myGeeks(item) {
-            console.log(people.reduce(sumofArray));
-        }
+    }, 0);
+    console.log(sums);
     })
-    })();
+
+})();
