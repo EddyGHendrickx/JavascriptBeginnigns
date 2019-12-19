@@ -14,12 +14,16 @@
     // your code here
     document.getElementById("run").addEventListener("click", function(){
 
-        var visitorBirthDay = document.getElementById("dob-day").selectedIndex;
-        var visitorBirthMonth = document.getElementById("dob-month").selectedIndex;
-        var visitorBirthYear = document.getElementById("dob-year").selectedIndex;
+        var visitorBirthDay = document.getElementById("dob-day").value;
+        var visitorBirthMonth = document.getElementById("dob-month").value;
+        var visitorBirthYear = document.getElementById("dob-year").value;
+        var birthDay = (`${visitorBirthMonth}/${visitorBirthDay}/${visitorBirthYear}`);
+        const visitorBirthDate = new Date(`'${visitorBirthMonth}/${visitorBirthDay}/${visitorBirthYear}'`);
+        let today = new Date().toLocaleDateString();
+        const diffTime = Math.abs(today - visitorBirthDate);
 
-    console.log(visitorBirthday);
-
-
+        console.log(today);
+        console.log(birthDay);
+        console.log(diffTime);
     });
 })();
