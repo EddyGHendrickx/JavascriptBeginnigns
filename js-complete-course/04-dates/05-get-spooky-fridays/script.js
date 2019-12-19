@@ -9,16 +9,61 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function () {
-    document.getElementById("run").addEventListener("click", function(){
-    var month = 0;
-    var weekDay = new Date().getDay();
-    var day = new Date().getDate();
-    var inputYear = +document.getElementById("year").value;
-    var thisTime = new Date();
-    thisTime.setFullYear(inputYear, month, day, weekDay);
-    console.log(thisTime);
+(function() {
+    document.getElementById("run").addEventListener("click", function() {
+        let userInput = Number(document.getElementById("year").value);
+
+
+        function monthsWithFriday13(year) {
+            for (let month=0; month<12; month++) {
+                let d = new Date(year,month,13);
+                //checks if it is friday
+                if(d.getDay() == 5){
+                    // prints the months that have a friday the 13th
+
+                    switch (month) {
+                        case 0:
+                            alert("January");
+                            break;
+                        case 1:
+                            alert("Februray");
+                            break;
+                        case 2:
+                            alert("March");
+                            break;
+                        case 3:
+                            alert("April");
+                            break;
+                        case 4:
+                            alert("May");
+                            break;
+                        case 5:
+                            alert("June");
+                            break;
+                        case 6:
+                            alert("July");
+                            break;
+                        case 7:
+                            alert("August");
+                            break;
+                        case 8:
+                            alert("September");
+                            break;
+                        case 9:
+                            alert("October");
+                            break;
+                        case 10:
+                            alert("November");
+                            break;
+                        case 11:
+                            alert("December");
+                            break;
+                    }
+                }
+            }
+        }
+
+        monthsWithFriday13(userInput);
+
     })
-
 })();
-
