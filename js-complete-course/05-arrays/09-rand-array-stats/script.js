@@ -35,9 +35,14 @@ document.getElementById("run").addEventListener("click", function () {
     document.getElementById("n-9").innerHTML = rand9;
     document.getElementById("n-10").innerHTML = rand10;
     let sortedArray = randArray.sort((a, b) => {return a-b;});
+    var arraySum = rand1 + rand2 + rand3 + rand4 + rand5 + rand6 + rand7 + rand8 + rand9 + rand10;
+    var arrayAverage = arraySum/(randArray.length);
     document.getElementById("min").innerHTML = sortedArray[0];
     document.getElementById("max").innerHTML = sortedArray[9];
-    
-    console.log(sortedArray);
+    document.getElementById("sum").innerHTML = arraySum;
+    document.getElementById("average").innerHTML = arrayAverage;
+
+    var arraySum = rand1 + rand2 + rand3 + rand4 + rand5 + rand6 + rand7 + rand8 + rand9 + rand10;
+    console.log(randArray.length);
 })
 })();
