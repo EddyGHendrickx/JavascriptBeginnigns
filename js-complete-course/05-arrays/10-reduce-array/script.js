@@ -88,7 +88,15 @@
             age: 81,
         },
     ];
-
-    // your code here
-
-})();
+    function sumofArray(sum, num) {
+        return sum + num;
+    }
+    document.getElementById("run").addEventListener("click", function () {
+        function sumofArray(sum, num) {
+            return sum + num;
+        }
+        function myGeeks(item) {
+            console.log(people.reduce(sumofArray));
+        }
+    })
+    })();
