@@ -11,26 +11,29 @@
 
 (function() {
 
+
     document.getElementById("pass-one").addEventListener("keyup", function () {
-        var input = document.getElementById("pass-one").value;
-        var inputLength = input.length;
+        let input = document.getElementById("pass-one");
+
+        let number = 0;
+        let inputValue = input.value;
+        let inputTotal = inputValue.length;
+
+        for (i = 0; i < inputTotal; i++) {
+            let string = inputValue.charAt(i);
 
 
-            function checkNumber(i) {
-                for(let i=0; i > inputLength; i++)
-                if (input.charAt(isNaN(i))) {
-                    return false;
-                } else {
-                    return true;
-                }
-            }
+            for (b = 0; b < 9; b++) {
 
-        if(checkNumber(i)==true && inputLength >= 8){
-            document.getElementById("validity").innerHTML = "OK";
+
+                if (b === parseInt(string)) {
+                    number++;
+                }}}
+
+
+        if ((number >= 2) && (inputTotal >= 8)) {
+            document.getElementById("validity").innerHTML = "Ok";
         }
-        else {
-            document.getElementById("validity").innerHTML = "Not OK";
+    });
 
-        }
-    })
 })();
