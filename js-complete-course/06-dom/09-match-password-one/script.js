@@ -11,6 +11,25 @@
 
 (function() {
 
-    // your code here
+
+document.getElementById("run").addEventListener("click", function () {
+    let pass1 = document.getElementById("pass-one").value;
+    let pass2 = document.getElementById("pass-two").value;
+    let borderBox1 = document.getElementById("pass-one").style;
+    let borderBox2 = document.getElementById("pass-two").style;
+    
+    if(pass1 === pass2) {
+        alert("Your password is correct!");
+        borderBox1.borderColor = "green";
+        borderBox2.borderColor = "green";
+    }
+        else {
+        borderBox1.borderColor = "red";
+        borderBox2.borderColor = "red";
+
+    }
+
+
+})
 
 })();
