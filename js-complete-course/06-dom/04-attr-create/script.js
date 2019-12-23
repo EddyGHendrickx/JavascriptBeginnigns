@@ -11,6 +11,8 @@
 
 (function() {
 
-    // your code here
+var source = document.getElementById("source").getAttribute("data-image");
 
+document.getElementById("target").setAttribute("data-image", source);
+document.getElementById("source").removeAttribute("data-image");
 })();

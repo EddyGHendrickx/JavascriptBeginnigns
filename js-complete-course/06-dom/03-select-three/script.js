@@ -11,6 +11,9 @@
 
 (function() {
 
-    // your code here
+document.querySelectorAll("p.target").forEach(function (p) {
+    p.innerHTML = "owned";
+})
+
 
 })();
