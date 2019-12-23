@@ -13,7 +13,7 @@
 
 document.getElementById("pass-one").setAttribute("maxlength", "10");
 
-document.getElementById("pass-one").addEventListener("keydown", function () {
+document.getElementById("pass-one").addEventListener("keyup", function () {
     var input = document.getElementById("pass-one").value;
     var inputLength = input.length;
     console.log(inputLength);
