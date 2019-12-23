@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("img").addEventListener("mouseover", function () {
+        var before = document.querySelector("img").getAttribute("data-hover");
+        document.querySelector("img").setAttribute("src", before);
+        console.log(before);
+
+
+        });
+
+    document.querySelector("img").addEventListener("mouseout", function () {
+
+
+        var after = document.querySelector("img").getAttribute("src");
+        document.querySelector("img").setAttribute("data-hover", after);
+
+    })
 
 })();
