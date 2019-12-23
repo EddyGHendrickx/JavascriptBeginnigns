@@ -18,7 +18,15 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
+    let number = 0;
 
-    // your code here
+    document.getElementById("next").addEventListener("click", function () {
+        number++;
+        document.querySelector("img").setAttribute("src", gallery[number]);
+        console.log(number);
+        if(number>=4){
+            number = 0;
+        }
+    })
 
 })();
