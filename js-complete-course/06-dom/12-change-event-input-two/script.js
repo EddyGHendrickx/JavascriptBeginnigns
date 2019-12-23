@@ -11,6 +11,26 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("pass-one").addEventListener("keyup", function () {
+        var input = document.getElementById("pass-one").value;
+        var inputLength = input.length;
 
+
+            function checkNumber(i) {
+                for(let i=0; i > inputLength; i++)
+                if (input.charAt(isNaN(i))) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+        if(checkNumber(i)==true && inputLength >= 8){
+            document.getElementById("validity").innerHTML = "OK";
+        }
+        else {
+            document.getElementById("validity").innerHTML = "Not OK";
+
+        }
+    })
 })();
