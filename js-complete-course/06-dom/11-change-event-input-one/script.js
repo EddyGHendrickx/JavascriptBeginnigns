@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+document.getElementById("pass-one").setAttribute("maxlength", "10");
+
+document.getElementById("pass-one").addEventListener("keydown", function () {
+    var input = document.getElementById("pass-one").value;
+    var inputLength = input.length;
+    console.log(inputLength);
+    document.getElementById("counter").innerHTML = `${inputLength}/10`;
+})
+
 
 })();
