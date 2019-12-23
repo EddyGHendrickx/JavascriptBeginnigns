@@ -17,7 +17,7 @@ document.getElementById("run").addEventListener("click", function () {
     let pass2 = document.getElementById("pass-two").value;
     let borderBox1 = document.getElementById("pass-one").style;
     let borderBox2 = document.getElementById("pass-two").style;
-    
+
     if(pass1 === pass2) {
         alert("Your password is correct!");
         borderBox1.borderColor = "green";

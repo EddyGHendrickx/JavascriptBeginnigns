@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
-
-})();
+    document.getElementById("run").addEventListener("click", function () {
+        let pass1 = document.getElementById("pass-one").value;
+        let pass2 = document.getElementById("pass-two").value;
+        let borderTag1 = document.getElementById("pass-one");
+        let borderTag2 = document.getElementById("pass-two");
+        console.log(borderTag1);
+        if(pass1 === pass2) {
+            alert("Your password is correct!");
+        }
+        else {
+            borderTag1.setAttribute("class", "error");
+            borderTag2.setAttribute("class", "error");
+            
+        }
+})})();
