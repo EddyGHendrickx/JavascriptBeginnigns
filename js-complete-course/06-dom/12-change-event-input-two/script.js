@@ -34,6 +34,10 @@
         if ((number >= 2) && (inputTotal >= 8)) {
             document.getElementById("validity").innerHTML = "Ok";
         }
+        else {
+            document.getElementById("validity").innerHTML = "Not Ok";
+
+        }
     });
 
 })();
