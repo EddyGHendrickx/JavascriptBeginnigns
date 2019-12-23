@@ -10,7 +10,10 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+    let target = document.getElementById("target");
+    let newTable = document.createElement("table");
+    target.appendChild(newTable);
+    for(let i=0;i < 10; i++) {
+        newTable.insertRow(i);
+    }
 })();
