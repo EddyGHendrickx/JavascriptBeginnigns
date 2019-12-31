@@ -11,6 +11,29 @@
 
 (function() {
 
-    // your code here
 
+   let text = document.querySelector("#target").innerHTML;
+    var sizeOfFont = 0;
+    var extraNewThing = "";
+
+    for (i=0; i < text.length; i++){
+        var newString = "";
+        if (sizeOfFont >= 0 && sizeOfFont < 7) {
+            var newThing = newString.concat("", text[i].fontsize(sizeOfFont));
+            // console.log(newThing); returns : <font size="0">W</font>
+            extraNewThing += newThing;
+            sizeOfFont++;
+            console.log(sizeOfFont);
+        }
+        else {
+            var newThing = newString.concat("", text[i].fontsize(sizeOfFont));
+            // console.log(newThing); returns : <font size="0">W</font>
+            extraNewThing += newThing;
+            sizeOfFont--;
+            console.log(sizeOfFont);
+
+        }
+    }
+    console.log(extraNewThing);
+    document.querySelector("#target").innerHTML = extraNewThing;
 })();
