@@ -15,27 +15,30 @@
    let text = document.querySelector("#target").innerHTML;
     var sizeOfFont = 0;
     var extraNewThing = "";
+    var crement = true;
+    function waveIt() {
+        for (i = 0; i < text.length; i++) {
+            var newString = "";
 
-    for (i=0; i < text.length; i++){
-        var newString = "";
-        if (sizeOfFont >= 0 && sizeOfFont < 7) {
             var newThing = newString.concat("", text[i].fontsize(sizeOfFont));
             // console.log(newThing); returns : <font size="0">W</font>
             extraNewThing += newThing;
-            sizeOfFont++;
+            if (crement) {
+                sizeOfFont++;
+            } else {
+                sizeOfFont--;
+            }
+            if (sizeOfFont > 7) {
+                crement = false;
+            } else if (sizeOfFont == 0) {
+                crement = true;
+            }
             console.log(sizeOfFont);
         }
-        else {
-            newThing = newString.concat("", text[i].fontsize(sizeOfFont));
-            // console.log(newThing); returns : <font size="0">W</font>
-            extraNewThing += newThing;
-            sizeOfFont--;
-            
 
-            console.log(sizeOfFont);
 
-        }
-    }
     console.log(extraNewThing);
     document.querySelector("#target").innerHTML = extraNewThing;
+    }
+    waveIt();
 })();
