@@ -26,15 +26,16 @@
             console.log(sizeOfFont);
         }
         else {
-            for (sizeOfFont; sizeOfFont > 0; sizeOfFont--) {
-                newThing = newString.concat("", text[i].fontsize(sizeOfFont));
-                // console.log(newThing); returns : <font size="0">W</font>
-                extraNewThing += newThing;
-            }
+            newThing = newString.concat("", text[i].fontsize(sizeOfFont));
+            // console.log(newThing); returns : <font size="0">W</font>
+            extraNewThing += newThing;
+            sizeOfFont--;
+            
 
             console.log(sizeOfFont);
 
         }
     }
+    console.log(extraNewThing);
     document.querySelector("#target").innerHTML = extraNewThing;
 })();
