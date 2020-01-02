@@ -10,7 +10,30 @@
 // You will have time to focus on it later.
 
 (function() {
+    let buttons = document.querySelectorAll("button");
+    document.getElementById("target").innerHTML = 460000000;
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            var newNumber;
+            var targetText = +document.getElementById("target").innerHTML;
+            if (button.id === "part-four"){
+                newNumber = +document.getElementById("target").innerHTML;
+                document.getElementById("target").innerHTML = newNumber + 1;
+            }
+            if (button.id === "part-three"){
+                newNumber = +document.getElementById("target").innerHTML;
+                document.getElementById("target").innerHTML = newNumber + 100;
+            }
+            if (button.id === "part-two"){
+                newNumber = +document.getElementById("target").innerHTML;
+                document.getElementById("target").innerHTML = newNumber + 10000;
+            }
+            if (button.id === "part-one"){
+                newNumber = +document.getElementById("target").innerHTML;
+                document.getElementById("target").innerHTML = newNumber + 1000000;
+            }
+        });
+    })
 
-    // your code here
 
 })();
