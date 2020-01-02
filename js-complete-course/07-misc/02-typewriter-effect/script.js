@@ -11,6 +11,43 @@
 
 (function() {
 
-    // your code here
+
+    let i = 0;
+    let targetText = document.getElementById("target").innerHTML;
+
+    //empty the innerhtml so you can insert typewriter
+    document.getElementById("target").innerHTML="";
+
+    function typewriter(){
+
+        if (i < targetText.length){
+            document.getElementById("target").innerHTML += targetText.charAt(i);
+            i++;
+            //random speed
+            let timeout = Math.round(Math.random() * 500);
+            setTimeout(typewriter, timeout);
+        }
+    }
+
+    typewriter();
+
 
 })();
+
+
+//for(i = 1; i < badge_arr.length; i++){
+//     (function(i){
+//         setTimeout(function(){
+//             responseStr += badge_arr[i];
+//             //Create growl notification
+//             //badge info echoed back will be of the form
+//             //Earned badge: name: description: imgSource
+//             var badge_info = badge_arr[i].split(':');
+//             var title = 'NEW BADGE UNLOCKED';
+//             var text = 'You just unlocked the badge '+badge_info[0] +
+//                        ': '+badge_info[1];
+//             var img = badge_info[2];
+//             createGrowl(title, text, img);
+//         }, 1000 * i);
+//     }(i));
+// }
