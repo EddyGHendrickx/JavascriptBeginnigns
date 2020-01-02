@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    let button = document.getElementById("increment");
+    let counter = document.getElementById("target");
+    counter.innerHTML = localStorage.getItem("aantalKliks");
+
+    button.addEventListener("click", function () {
+        counter.innerHTML++;
+        localStorage.setItem("aantalKliks", counter.innerHTML);
+    });
 
 })();

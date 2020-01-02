@@ -20,7 +20,7 @@
         for (i = 0; i < text.length; i++) {
             var newString = "";
 
-            var newThing = newString.concat("", text[i].fontsize(sizeOfFont));
+            var newThing = text[i].fontsize(sizeOfFont);
             // console.log(newThing); returns : <font size="0">W</font>
             extraNewThing += newThing;
             if (crement) {
