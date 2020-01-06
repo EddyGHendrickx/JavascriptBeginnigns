@@ -20,10 +20,11 @@
             .then(function (myJson) {
                 document.getElementById("run").addEventListener("click", function(){
                 var heroes = myJson.heroes;
-                heroes.forEach(function (element) {
+
+                    heroes.forEach(function (element) {
                     let heroId = document.getElementById("hero-id").value;
                     if (heroId == element.id) {
-                        delete heroes[element.id];
+                        delete heroes[element.id - 1];
                         console.log(heroes);
                     }
                 })
