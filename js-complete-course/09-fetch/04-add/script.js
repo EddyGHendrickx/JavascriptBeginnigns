@@ -10,24 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    let newHeroes = {};
+    var newHeroes = {};
 
 
-    document.getElementById("run").addEventListener("click", function(){
+
         fetch("http://localhost:12345/_shared/api.json")
             .then(function (response) {
                 return response.json();
 
             })
             .then(function (myJson) {
+                document.getElementById("run").addEventListener("click", function(){
                 let heroes = myJson.heroes;
 
                     let inputName = document.getElementById("hero-name").value;
                     let inputAlterEgo = document.getElementById("hero-alter-ego").value;
                     let inputPower = document.getElementById("hero-powers").value;
-                    
+                    let objectLength = heroes.length + 1;
                     newHeroes = {
-                      id: heroes.length+1,
+                      id: objectLength,
                       name: inputName,
                       AlterEgo: inputAlterEgo,
                       power: {
