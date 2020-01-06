@@ -22,7 +22,7 @@
                 heroes.forEach(function (element) {
                     let templateTarget = document.getElementById("tpl-hero");
                     let heroId = document.getElementById("hero-id").value;
-                     console.log(heroId);
+                    console.log(heroes);
                     let newTarget = templateTarget.content.cloneNode(true);
                     if (heroId == element.id) {
                         newTarget.querySelector(".name").innerHTML = element.name;
