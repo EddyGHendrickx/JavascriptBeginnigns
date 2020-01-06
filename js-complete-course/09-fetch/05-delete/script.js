@@ -11,19 +11,20 @@
 
 (() => {
 
-    document.getElementById("run").addEventListener("click", function(){
+
         fetch("http://localhost:12345/_shared/api.json")
             .then(function (response) {
                 return response.json();
 
             })
             .then(function (myJson) {
+                document.getElementById("run").addEventListener("click", function(){
                 var heroes = myJson.heroes;
                 heroes.forEach(function (element) {
                     let heroId = document.getElementById("hero-id").value;
-                    console.log(heroes);
                     if (heroId == element.id) {
-                        delete heroes[heroId];
+                        delete heroes[element.id];
+                        console.log(heroes);
                     }
                 })
 
