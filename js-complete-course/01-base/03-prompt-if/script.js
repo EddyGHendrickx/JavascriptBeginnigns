@@ -13,7 +13,7 @@ function Yes() {
 
 alert(`The cake is a lie`)
 
-};
+}
 
 function No(){
     alert (`More cake for me then`)

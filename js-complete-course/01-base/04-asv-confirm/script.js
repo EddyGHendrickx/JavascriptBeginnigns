@@ -18,9 +18,6 @@ function button() {
 
     let c = confirm(`Your age is ${age}. You identify as ${gender} and you live in ${residency}?`);
 
-    function denied() {
-        document.getElementById()
-    }
 
     if (c == true) {
         txt = "You pressed OK!";

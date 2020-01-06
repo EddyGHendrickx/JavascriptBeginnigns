@@ -15,21 +15,23 @@
     let i = 0;
     let targetText = document.getElementById("target").innerHTML;
 
-    //empty the innerhtml so you can insert typewriter
     document.getElementById("target").innerHTML="";
 
-    function typewriter(){
 
-        if (i < targetText.length){
+    function typeWriter(){
+
+        if (i < targetText.length) {
             document.getElementById("target").innerHTML += targetText.charAt(i);
             i++;
             //random speed
-            let timeout = Math.round(Math.random() * 500);
-            setTimeout(typewriter, timeout);
+            let timeout = Math.round(Math.random() * 5000);
+            setInterval(typeWriter, timeout);
         }
+
     }
 
-    typewriter();
+
+    typeWriter();
 
 
 })();

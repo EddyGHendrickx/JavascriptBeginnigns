@@ -11,11 +11,14 @@
 
 (function() {
     let buttons = document.querySelectorAll("button");
+
     document.getElementById("target").innerHTML = 460000000;
+
     buttons.forEach(function (button) {
+
         button.addEventListener("click", function () {
             var newNumber;
-            var targetText = +document.getElementById("target").innerHTML;
+
             if (button.id === "part-four"){
                 newNumber = +document.getElementById("target").innerHTML;
                 document.getElementById("target").innerHTML = newNumber + 1;

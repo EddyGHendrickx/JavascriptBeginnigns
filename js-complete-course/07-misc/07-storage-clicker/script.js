@@ -13,11 +13,17 @@
 
     let button = document.getElementById("increment");
     let counter = document.getElementById("target");
-    counter.innerHTML = localStorage.getItem("aantalKliks");
+    let clearButton = document.getElementById("clear");
+
+    counter.innerHTML = localStorage.getItem("timesClicked") || 0;
 
     button.addEventListener("click", function () {
         counter.innerHTML++;
-        localStorage.setItem("aantalKliks", counter.innerHTML);
+        localStorage.setItem("timesClicked", counter.innerHTML);
     });
 
+    clearButton.addEventListener("click", function () {
+        localStorage.removeItem("timesClicked");
+        counter.innerHTML = 0;
+    })
 })();
