@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    document.getElementById("run").addEventListener("click", function(){
+    fetch("http://localhost:12345/_shared/api.json")
+        .then(function (response) {
+            return response.json();
+
+
+        })
+        .then(function (myJson) {
+            var heroes = myJson.heroes;
+            heroes.forEach(function (element) {
+                console.log(element.abilities);
+            })
+
+        });
+    });
 })();
